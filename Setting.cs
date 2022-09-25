@@ -1,8 +1,8 @@
 //quote
 using System.Collections;   
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine;//call unity
+using UnityEngine.SceneManagement;//Call Unity's Scene Management
 
 //lens control
 public class Setting : MonoBehaviour
