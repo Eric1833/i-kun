@@ -11,7 +11,7 @@ public class Setting : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
     }
-
+//Play background music
     public void Music() 
     {
 
