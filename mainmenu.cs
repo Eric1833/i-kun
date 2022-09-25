@@ -25,14 +25,34 @@ using UnityEngine.SceneManagement;
 public class mainmenu : MonoBehaviour
 {
     public void PlayGame () // page for  game part 
+    //@Preconditions: None
+    //@Postconditions: None
+    //@Error and exception condition values or types that can occur, and their meanings: None
+    //@Side effects: None
+    //@Invariants: None
+    //@known faults: None
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+        
     public void Setting() //  page for move to setting part
+    //@Preconditions: None
+    //@Postconditions: None
+    //@Error and exception condition values or types that can occur, and their meanings: None
+    //@Side effects: None
+    //@Invariants: None
+    //@known faults: None
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         }
+
     public void QuitGame() //  QUITE the Game
+    //@Preconditions: None
+    //@Postconditions: None
+    //@Error and exception condition values or types that can occur, and their meanings: None
+    //@Side effects: None
+    //@Invariants: None
+    //@known faults: None
         {
         Application.Quit();
         }
