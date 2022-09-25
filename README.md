@@ -1,2 +1,2 @@
 # i-kun
-EECS 581
+EECS 581 sing jump basketball
