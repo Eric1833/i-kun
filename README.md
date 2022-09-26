@@ -5,5 +5,5 @@ Practice C++ two and half year
   
  Project for shooting game 
 
-Team: 
+##Team: 
 Chen Lu, Jiayi Fu, Zhaoyang Xue, Yuyang Fan, Haoxuan Feng
