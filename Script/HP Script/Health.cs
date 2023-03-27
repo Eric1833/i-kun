@@ -27,8 +27,9 @@ public class Health : MonoBehaviour
 	public GameObject deathCam;					// The camera to activate when the player dies
 
 	private bool dead = false;					// Used to make sure the Die() function isn't called twice
-
 	
+	public float RandomPos;
+
 
 	// FIXED PART //
 	private Animator animator; // got animator
@@ -63,7 +64,8 @@ public class Health : MonoBehaviour
 	}
 
 	public void Die()
-	{
+	{	
+		float time = 5.0f;
 		Debug.Log("zombie dead");
 		// This GameObject is officially dead.  This is used to make sure the Die() function isn't called again
 		dead = true;
@@ -72,12 +74,26 @@ public class Health : MonoBehaviour
 
 		// Remove this GameObject from the scene
 		//Destroy(gameObject);
-		StartCoroutine(waiter());
+		
+		Destroy(gameObject, time);
+
+		if(deadReplacement){
+			StartCoroutine(waiter());
+        }
+		
+		//StartCoroutine(waiter2());
 	}
 	IEnumerator waiter()
 	{
-		yield return new WaitForSeconds(5f);
-        Destroy(gameObject);
+		yield return new WaitForSeconds(3f);
+		float posx = transform.position.x + Random.Range(-RandomPos + 10, RandomPos - 10);//get a random x position 
+            
+        float posz = transform.position.z + Random.Range(-RandomPos + 10, RandomPos - 10);//get a random z position 
+
+       	Vector3 randomNewPos = new Vector3(posx, transform.position.y, posz);//combo the new position
+        Instantiate(deadReplacement, randomNewPos, transform.rotation);
     }
+
+	
 	
 }
