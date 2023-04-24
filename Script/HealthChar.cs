@@ -21,9 +21,13 @@ public class HealthChar : MonoBehaviour
 
     public HealthBar healthBar;
     public GameObject Menu;
+    private AudioSource audioSource;
+    public AudioClip hitSound; 
     void Start()
     {
         curHealth = maxHealth;
+        audioSource = GetComponent<AudioSource>();
+        hitSound = Resources.Load<AudioClip>("Assets/BGM/hit.mp3");
     }
 
     void Update()
